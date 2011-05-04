@@ -92,3 +92,8 @@ You can supply options as a hash, e.g.
     });
 
 See `samples` dir for an example.
+
+## License
+
+Released under the MIT License. See the LICENSE file for further
+details.
