@@ -67,7 +67,9 @@ Phocus takes several options:
   header.
 
 * `show_overlay_callback` A callback function invoked when the overlay
-  is shown.  * `hide_overlay_callback` A callback function invoked
+  is shown.
+
+* `hide_overlay_callback` A callback function invoked
   when the overlay is being hidden. 
 
 * `show_image_callback` A callback function invoked when a new image
