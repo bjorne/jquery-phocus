@@ -1,14 +1,15 @@
 (function($) {
 
   var defaults = { 
-    history: true, 
+    history: false, 
     active_thumb_overlay_url: "/img/fs-thumb-marker.png",
     extra_top_margin_callback: function(){ return 0; },
     show_overlay_callback: function(){}, 
     hide_overlay_callback: function(){}, 
     show_image_callback: function(){},
-    title_for_link: function(el){ return ""; },
-    subtitle_for_link: function(el){ return ""; }
+    title_for_link: function(el){ return $(el).attr('title');
+                         },
+    subtitle_for_link: function(el){ return $(el).attr('href').split('/').pop(); }
   };
   var options;
   var overlay_showing = false;
