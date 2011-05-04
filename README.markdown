@@ -36,8 +36,7 @@ Include the following CSS to make phocus look as it should:
     #fs-overlay { width: 100%; background: #000; position: fixed; z-index: 3; top: 0; left: 0; display: none;}
     #fs-stage { overflow: hidden; width: 100%; padding-top: 5px; }
     #fs-image { position: relative; }
-    #fs-info { text-align: center; opacity:0.7;
-    #filter:alpha(opacity=70); background: #000; position: fixed; bottom: 60px; width: 100%; color: #fff; }
+    #fs-info { text-align: center; opacity:0.7; filter:alpha(opacity=70); background: #000; position: fixed; bottom: 60px; width: 100%; color: #fff; }
     #fs-title { padding-top: 10px;}
     #fs-metadata { font-size: 85%; padding-bottom: 10px;}
     #fs-footer { overflow: hidden; width: 100%; }
