@@ -1,0 +1,72 @@
+<!DOCTYPE html> 
+<html lang="en" xmlns:fb="http://www.facebook.com/2008/fbml"> 
+  <head>
+    <title>Phocus test gallery</title>
+    <style type="text/css" media="screen">
+      body { font-family: arial, sans-serif; }
+      .thumb { float: left; margin-right: 5px; }
+    </style>
+    <script type="text/javascript"
+            src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> 
+    <script type="text/javascript" src="../jquery.phocus.js"></script>
+    <script type="text/javascript">
+      $(function(){
+      $("#gallery img").phocus({
+        history: false,
+        active_thumb_overlay_url: "img/fs-thumb-marker.png",
+        title_for_link: function(link) {
+            return "<strong>" + $(link).attr('title') + "</strong> (" + $(link).attr('data-date-taken') + ")";
+        },
+        subtitle_for_link: function(link) {
+            return $(link).attr('data-description');
+        }
+      });
+      });
+    </script>
+    <style type="text/css" media="screen">
+      #fs-overlay { width: 100%; background: #000; position: fixed; z-index: 3; top: 0; left: 0; display: none;}
+      #fs-stage { overflow: hidden; width: 100%; padding-top: 5px; }
+      #fs-image { position: relative; }
+      #fs-info { text-align: center; opacity:0.7; filter:alpha(opacity=70); background: #000; position: fixed; bottom: 60px; width: 100%; color: #fff; }
+      #fs-title { padding-top: 10px;}
+      #fs-metadata { font-size: 85%; padding-bottom: 10px;}
+      #fs-footer { overflow: hidden; width: 100%; }
+      #fs-thumbs { position: fixed; z-index: 11; left: 0;  position: fixed; bottom: 0; padding-top: 10px; }
+      #fs-thumbs a { position: relative; }
+      #fs-thumb-marker { position: absolute; opacity:0.7; filter:alpha(opacity=70) }
+      #fs-temp { overflow: hidden; width: 1px; height: 1px; position: absolute;}
+      #fs-loading { position: fixed; top: 40%; width: 100%; text-align: center; z-index: 10; display: none; color: #fff; }
+    </style>
+  </head>
+
+  <body>
+    <h1>Phocus test gallery</h1>
+
+    <p>Click an image to see the fullscreen gallery.</p>
+
+    <div id="gallery">
+      <div class="thumb">
+        <a href="img/img1.jpg" title="Image 1"
+           data-date-taken="Oct 16, 2010"
+           data-description="Description for image 1">
+          <img src="img/thumb-img1.jpg" />
+        </a>
+      </div>
+      <div class="thumb">
+        <a href="img/img2.jpg" title="Image 2"
+           data-date-taken="Oct 17, 2010"
+           data-description="Description for image 2">
+          <img src="img/thumb-img2.jpg" />
+        </a>
+      </div>
+      <div class="thumb">
+        <a href="img/img3.jpg" title="Image 3"
+           data-date-taken="Oct 18, 2010"
+           data-description="Description for image 3">
+          <img src="img/thumb-img3.jpg" />
+        </a>
+      </div>
+
+    </div> 
+  </body>
+</html>
